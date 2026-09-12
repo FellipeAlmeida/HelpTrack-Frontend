@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build: .
+    container_name: helptrack-front
+    ports:
+      - 5173:5173
+    volumes:
+      - .:/app
+      - /app/node_modules # <-- preserva o node_modules num volume separado
+    environment:
+      - CHOKIDAR_USEPOLLING=true # <-- bibliote para detectar alterações em arquivos
+    stdin_open: true # <-- entrada de texto para o terminal
+    tty: true # <-- cria um pseudo-terminal, evita comportamentos estranhos do sistema caso ele nao tivesse terminal
