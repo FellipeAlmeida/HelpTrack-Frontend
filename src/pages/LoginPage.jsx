@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LoginComponent from "../components/LoginPageComponent.jsx";
+import LoginFormComponent from "../components/LoginFormComponent.jsx";
+import SideBar from "../components/SideBarLogin.jsx";
 
 function Login(){ 
     return (
-        <LoginComponent />
+        <main className="flex">
+            <SideBar/>
+            <LoginFormComponent />
+        </main>
     )
 }
 
