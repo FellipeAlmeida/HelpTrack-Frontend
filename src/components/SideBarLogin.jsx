@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-function SideBar({subtitulo, minititulo, systemInfos, divHidden, divHiddenTwo, steps, hrHidden}){
-    const [grayElement, setGrayElement] = useState(false)
+function SideBar({subtitulo, minititulo, systemInfos, divHidden, divHiddenTwo, steps, hrHidden, setLoading}){
+    const [passedElement, setPassedElement] = useState(false)
 
     return (
         <div className="bg-[#1E3A5F] flex flex-col h-screen w-1/5 p-[48px] justify-between">
